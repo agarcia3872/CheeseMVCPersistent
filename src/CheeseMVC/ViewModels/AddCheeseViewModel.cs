@@ -23,25 +23,28 @@ namespace CheeseMVC.ViewModels
 
         public AddCheeseViewModel() {
 
-            CheeseTypes = new List<SelectListItem>();
-
-            // <option value="0">Hard</option>
-            CheeseTypes.Add(new SelectListItem {
-                Value = ((int) CheeseType.Hard).ToString(),
-                Text = CheeseType.Hard.ToString()
-            });
-
-            CheeseTypes.Add(new SelectListItem
+            CheeseTypes = new List<SelectListItem>
             {
-                Value = ((int)CheeseType.Soft).ToString(),
-                Text = CheeseType.Soft.ToString()
-            });
 
-            CheeseTypes.Add(new SelectListItem
-            {
-                Value = ((int)CheeseType.Fake).ToString(),
-                Text = CheeseType.Fake.ToString()
-            });
+                // <option value="0">Hard</option>
+                new SelectListItem
+                {
+                    Value = ((int)CheeseType.Hard).ToString(),
+                    Text = CheeseType.Hard.ToString()
+                },
+
+                new SelectListItem
+                {
+                    Value = ((int)CheeseType.Soft).ToString(),
+                    Text = CheeseType.Soft.ToString()
+                },
+
+                new SelectListItem
+                {
+                    Value = ((int)CheeseType.Fake).ToString(),
+                    Text = CheeseType.Fake.ToString()
+                }
+            };
 
         }
     }
